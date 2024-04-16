@@ -4,8 +4,53 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="TCSG">
   <header>
-    <h1>The extension to enhance your Tailwind CSS projects</h1>
-    <p>TCSG is the Visual Studio Code Extension to boost your efficiency when working on a Tailwind CSS project.</p>
+    <nav
+      class="flex justify-between border-b-[1px] border-[rgba(255,255,255,0.5)] p-3"
+    >
+      <div class="flex gap-3">
+        <img src="https://placehold.co/32" alt="Logo" />
+        <span class="logo-title text-lg font-semibold leading-[32px]">TCSG</span
+        >
+      </div>
+      <button type="button">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="32"
+          height="32"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="#fff"
+          fill="none"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <path d="M4 6l16 0"></path>
+          <path d="M4 12l16 0"></path>
+          <path d="M4 18l16 0"></path>
+        </svg>
+      </button>
+      <ul class="hidden">
+        <li><a href="#">What is TCSG</a></li>
+        <li><a href="#">Contribute</a></li>
+      </ul>
+    </nav>
+    <div
+      class="bg-radial relative overflow-x-hidden px-4 pb-12 pt-8 text-center"
+    >
+      <h1 class="mb-6 text-4xl">
+        The extension to enhance your <span class="text-primary"
+          >Tailwind CSS</span
+        > projects
+      </h1>
+      <p class="mb-8">
+        TCSG is the perfect Visual Studio Code Extension to boost your
+        efficiency when working on a Tailwind CSS project.
+      </p>
+      <a href="#" class="rounded-full bg-white px-9 py-4 text-lg text-secondary"
+        >Get started</a
+      >
+    </div>
   </header>
   <main>
     <section>
@@ -18,11 +63,10 @@ import Layout from "../layouts/Layout.astro";
       </div>
     </section>
     <section>
-      <h2>Contribute</h2>
+      <h2>Contribute to this project</h2>
     </section>
   </main>
   <footer>
     <p><a href="#">MIT License</a> © 2024</p>
   </footer>
-  
 </Layout>
