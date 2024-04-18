@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  text: string;
+  link: string;
+}
+
+const { title, text, link } = Astro.props;
+---
+
+<div
+  class="mb-6 w-[275px] border-l-2 border-primary border-opacity-50 bg-bg-black px-3 pt-3"
+>
+  <h3>{title}</h3>
+  <p class="mb-1">{text}</p>
+  <div class="flex">
+    <a href={link} class="flex gap-1 py-3 hover:underline"
+      >Learn more
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="#fff"
+        fill="none"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+        <path d="M17 7l-10 10"></path>
+        <path d="M8 7l9 0l0 9"></path>
+      </svg></a
+    >
+  </div>
+</div>

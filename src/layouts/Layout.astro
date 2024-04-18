@@ -40,6 +40,7 @@ const { title } = Astro.props;
     --secondary: #1768ac;
     --black: #202324;
     --white: #fff;
+    --bg-pattern: url("../assets/cubes.png");
   }
   body {
     font-family: "Raleway", sans-serif;
@@ -54,13 +55,24 @@ const { title } = Astro.props;
   h6 {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
+    margin-bottom: 1.5rem;
+  }
+
+  h2 {
+    text-align: center;
+    @apply text-3xl;
+  }
+
+  h3 {
+    @apply text-2xl;
+    margin-bottom: 1rem;
   }
 
   .bg-radial::before {
     content: "";
     position: absolute;
-    top: -6%;
-    bottom: -6%;
+    top: -10%;
+    bottom: -3%;
     left: -25%;
     width: 150%;
     background: linear-gradient(
@@ -69,11 +81,27 @@ const { title } = Astro.props;
       var(--secondary) 100%
     );
     z-index: -1;
-    mask-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.45), transparent 65%);
+    mask-image: radial-gradient(ellipse, rgba(0, 0, 0, 0.45), transparent 60%);
   }
 
   .logo-title {
     font-family: "Rubik", sans-serif;
     font-weight: 600;
+  }
+
+  .bg-pattern::before {
+    content: "";
+    position: absolute;
+    top: -5%;
+    bottom: -5%;
+    left: -25%;
+    width: 150%;
+    background-image: var(--bg-pattern);
+    z-index: -1;
+    mask-image: radial-gradient(
+      ellipse 150% 65%,
+      rgba(0, 0, 0, 0.7),
+      transparent 70%
+    );
   }
 </style>

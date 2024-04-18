@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="TCSG">
@@ -35,29 +36,44 @@ import Layout from "../layouts/Layout.astro";
         <li><a href="#">Contribute</a></li>
       </ul>
     </nav>
-    <div
-      class="bg-radial relative overflow-x-hidden px-4 pb-12 pt-8 text-center"
-    >
-      <h1 class="mb-6 text-4xl">
+  </header>
+  <main>
+    <div class="bg-radial relative overflow-hidden px-4 py-8 text-center">
+      <h1 class="text-4xl">
         The extension to enhance your <span class="text-primary"
           >Tailwind CSS</span
         > projects
       </h1>
       <p class="mb-8">
-        TCSG is the perfect Visual Studio Code Extension to boost your
-        efficiency when working on a Tailwind CSS project.
+        TCSG is the perfect <a
+          href="https://code.visualstudio.com/"
+          class="underline"
+          target="_blank">Visual Studio Code</a
+        > Extension to boost your efficiency when working on a Tailwind CSS project.
       </p>
       <a href="#" class="rounded-full bg-white px-9 py-4 text-lg text-secondary"
         >Get started</a
       >
     </div>
-  </header>
-  <main>
+  </main>
+  <section class="bg-pattern relative overflow-hidden px-4 py-8">
     <section>
-      <h2>The perfect companion for your Tailwind CSS adventures</h2>
-      <div>
-        <h3>Start a Tailwind CSS project in the blink of an eye</h3>
+      <div class="mb-6">
+        <h2>The perfect companion for your Tailwind adventures</h2>
+        <p class="text-center">
+          Discover the features we offer to bring together all your development
+          needs in one place: <a
+            href="https://code.visualstudio.com/"
+            class="underline"
+            target="_blank">Visual Studio Code</a
+          >
+        </p>
       </div>
+      <Card
+        title="Start a project from VSCode in the blink of an eye"
+        text="Initialize your projects with quality of life development dependancies to get you started when creating a new Tailwind CSS project. Install the extension and start a new project with a single click."
+        link="#"
+      />
       <div>
         <h3>Include precreated components to your project from the editor</h3>
       </div>
@@ -65,7 +81,7 @@ import Layout from "../layouts/Layout.astro";
     <section>
       <h2>Contribute to this project</h2>
     </section>
-  </main>
+  </section>
   <footer>
     <p><a href="#">MIT License</a> © 2024</p>
   </footer>
